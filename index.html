@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        
+        .form-input {
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            color: #293240;
+            border: 1px solid #f0f2f8;
+            background-color: #f6f8fd;
+            outline: none;
+            border-radius: 4px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
+        .form-input:focus {
+            border: 1px solid #239ce2;
+        }
+        
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            border-radius: 0.25rem;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .btn-primary {
+            color: #fff;
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        
+        .btn-warning {
+            color: #000;
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+        
+        .btn-danger {
+            color: #fff;
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
+        .col-6 {
+            flex: 0 0 auto;
+            width: 90%;
+            margin: 0 20px;
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-6">
+            <textarea id="text" class="form-input" rows="18"></textarea>
+        </div>
+        <div class="col-6">
+            <label for="speed" class="label">Speed</label>
+            <input type="number" class="form-input" name="speed" id="speed" min=".5" max="3" step=".5" value="1">
+            <button id="play-button" class="btn btn-primary ">Play</button>
+            <button id="pause-button" class="btn btn-warning ">Pause</button>
+            <button id="stop-button" class="btn btn-danger">Stop</button>
+        </div>
+    </div>
+</body>
+
+</html>
